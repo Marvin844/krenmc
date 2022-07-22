@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KrenMc | Вебсайт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+    <style>
+      body {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body background="images/bg.png">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">KrenMc</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/"
+                ><img src="images/home.png" width="22px" />Главная</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/"
+                data-bs-toggle="modal"
+                data-bs-target="#Rules"
+                ><img src="images/rules.png" width="22px" />Правила</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="/"
+                data-bs-toggle="modal"
+                data-bs-target="#Sostav"
+                ><img src="images/group.png" width="22px" />Состав</a
+              >
+              <!-- Sostav -->
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="https://discord.com/invite/DmsYjPrwjG"
+                target="_blank"
+                ><img src="images/dc.png" width="22px" />Discord</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="https://vk.com/krenmc"
+                target="_blank"
+                ><img src="images/vk.png" width="22px" />Вконтакте</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="kren">KY.KRENMC.CYOU</h1>
+      <h3 class="online">Игроков в сети: <span id="player-count"></span></h3>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script type="text/javascript">
+        let ip = "ky.krenmc.cyou";
+
+        // server playercount
+        $.get("https://mcapi.us/server/status?ip=" + ip, function (res) {
+          if (res.status !== "success") return null;
+          $("#player-count").html(res.players.now);
+        });
+      </script>
+      <div class="container">
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="Rules"
+          tabindex="-1"
+          aria-labelledby="Rules"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Правила</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <b>0.1</b> Играя на наших серверах, Вы должны ознакомиться с
+                правилами.
+                <br />
+                <b>0.2</b> Незнание правил не освобождает от наказания. <br /><b
+                  >0.3</b
+                >
+                Правила могут дополняться или изменяться в будущем. <br /><b
+                  >0.4</b
+                >
+                Администрация сервера сама выбирает наказание для игрока в
+                зависимости от нарушения и ситуации. Вы можете получить
+                предупреждение, временный бан или вечный бан.<br />
+                <b>0.5</b> Деньги, потраченные на какие либо услуги сервера, не
+                возвращаются ни при каких обстоятельствах.<br />
+                <b>0.6</b> Ответственность несет владелец аккаунта, независимо
+                от того, кем им управлял. <br /><b>0.7</b> Вопросы по тиму
+                "Нужен тех. админ?" "Могу ли я стать Хелпером?" и подобные могут
+                полностью игнорироваться, все расписано здесь. <br /><br /><b
+                  >!!! Основные правила !!!</b
+                ><br />
+                <br /><b>1.</b> Читы запрещены Наказание: красный ник, уровни
+                начиная с 1 по 3, черные решетки с 1 по 3. *Красный ник 1 уровня
+                отбирает ваши хп до 8 половинок, делает ваш ник красным.
+                *Красный ник 2 уровня отбирает ваши хп до 6 половинок, делает
+                ваш ник жирно-красным. *Красный ник 2 уровня отбирает ваши хп до
+                4 половинок, делает ваш ник темно красным. *1 черная решётка
+                ограничивает вас на: (скоро) *2 черная решётка ограничивает вас
+                на: (скоро) *3 черная решётка ограничивает вас на: (скоро)
+                *Хелпер вправе выдать вам красный ник/черные решетки если он
+                увидел что вы играете с читами. *Хелпер вправе вызвать вас на
+                проверку, если он увидит запущенные читы, вы получаете красный
+                ник/решетку. *Вы вправе отказаться от проверки, но вы получите
+                красный ник минимум 2 уровня. (решетка 1-го) Наказание на
+                третьем сервере: бан навсегда. <br /><b>2.</b> Оскорбление
+                родителей Наказание: мут от 1 до 6 часов игрового времени, и/или
+                тюрьма игрового времени от 1 до 12 часов. <br /><b>3.</b> На
+                сервере запрещено пиарить/рекламировать посторонние проекты,
+                какие либо ресурсы. Наказание: мут от 1 до 6 часов игрового
+                времени, и/или тюрьма игрового времени от 1 до 12 часов, либо
+                бан навсегда. *Разрешается писать в лс игроку свои контактные
+                данные не в целях пиара.<br />
+                <b>4.</b> Оскорбление администрации Наказание: мут от 6 до 12
+                часов, и/или тюрьма игрового времени от 6 до 24 часов, бан от 30
+                дней либо навсегда. *Уважайте чужой труд.<br />
+                <b> 5.</b> Нанесение вреда серверу Наказание: бан от 1-120
+                дней/навсегда <br /><b>6.</b> Неуважение к любой администрации,
+                от tiktok, youtube, до GrandModer'a Наказание: бан от 1-120
+                дней/навсегда <br /><b>7.</b> Запрещено подставлять какого либо
+                игрока и обвинять в нарушении какого либо правила. Наказание:
+                бан навсегда<br />
+                <b>8.</b> Запрещена передача/продажа аккаунта 3-им лицам.
+                Наказание: бан навсегда, также бан всех аккаунтов под ваш IP,
+                также бан самого IP <br /><b>9.</b> Запрещается спамить в любой
+                чат, спамом считается от 4 сообщений подряд, даже если вы
+                изменили пару символов в вашем тексте. Наказание: мут до 12
+                часов<br />
+                <b>10.</b> Дюп на сервере запрещен. *Если вы увидели дюп
+                сообщите администрации, мы как можно быстрее его пофиксим. И
+                возможно мы выдадим вам поощрение. Наказание: бан навсегда,
+                также бан всех аккаунтов под ваш IP, также бан самого IP
+                <br /><b>11.</b> Использовать ботов которые будут за вас фармить
+                что либо, тот же Baritone. Наказание: бан навсегда, также бан
+                всех аккаунтов под ваш IP, также бан самого IP<br />
+                <b>12.</b> Запрещена любая попытка взлома какого либо аккаунта.
+                Наказание: бан навсегда, также бан всех аккаунтов под ваш IP,
+                также бан самого IP<br />
+                <b>13.</b> Запрещено публичное размещение объектов: имеющего
+                форму чего–либо непристойного, содержащих в себе оскорбления или
+                нецензурные выражения представляющих из себя нацистские
+                символы.<br />
+                <b>14.</b> Запрещено попрошайничество любого вида. Наказание мут
+                от 15 минут до 1 дн.
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="Sostav"
+          tabindex="-1"
+          aria-labelledby="Sostav"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Состав проекта
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <b>Высший персонал: </b> <br />
+                travis - Owner, Тех.Админ, Тех.Поддержка<br />
+                <b>GrandModer: </b> <br />
+                skovorodka232 - Тех.Админ, Тех.Поддержка<br />
+                <b>HELPER: </b> <br />
+                Oklick_sas<br />
+                <b>Trial HELPER: </b> <br />
+                <b>Moder: </b> <br />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- donate -->
+      <button class="donmenu">
+        <div class="donate">
+          <script src="https://api.trademc.org/trademcapi.js"></script>
+          <div id="trademc-buyform"></div>
+          <script>
+            TrademcAPI.GetBuyForm({
+              Shop: "166096",
+              Title: "Купить донат",
+              Nickname: "Введите ваш никнейм",
+              Item: "Выберите товар",
+              Coupon: "Введите купон, если есть",
+              Button: "Продолжить",
+              Success_URL: "https://krenmc.cyou/",
+              Pending_URL: "https://trademc.org",
+              Fail_URL: "https://trademc.org",
+              PastPlaceID: "trademc-buyform",
+            });
+          </script>
+        </div>
+      </button>
+      <div class="order">
+        <a href="/"> ky.krenmc.cyou</a>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- Site is made by https://ignatka.ml/ specially for ky.krenmc.cyou -->

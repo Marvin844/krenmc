@@ -1,0 +1,143 @@
+.kren {
+  color: rgb(255, 255, 255);
+  text-decoration-line: none;
+  font-family: "Dosis", sans-serif;
+  margin-bottom: 0%;
+  font-size: 4vw;
+  margin-top: 10%;
+}
+/* font-family: "Montserrat", sans-serif; */
+
+@media screen and (max-width: 1680px) {
+  section h1 {
+    font-size: 5vw;
+  }
+  section div {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section h1 {
+    font-size: 5vw;
+  }
+  section div {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 400) {
+  section .kren {
+    font-size: 5vw;
+  }
+  section div {
+    font-size: 5vw;
+  }
+}
+
+.online {
+  color: rgb(249, 249, 249);
+  text-decoration-line: none;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0%;
+  font-size: 2vw;
+}
+
+p {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 150%;
+}
+
+p a {
+  color: rgb(176, 60, 225);
+  transition: 0.3s;
+}
+
+.container button {
+  color: rgb(168, 50, 219);
+  border-color: rgb(168, 50, 219);
+  transition: 0.3s;
+  background-color: rgb(168, 50, 219);
+}
+
+.modal-footer button {
+  color: rgb(255, 255, 255) !important;
+}
+
+.modal .modal-header button {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.container button:hover {
+  background-color: rgb(180, 64, 229);
+  transition: 0.3s;
+  border-color: rgb(195, 73, 247);
+}
+
+.container .b1 {
+  border-color: rgb(210, 232, 244);
+  color: white;
+  border-radius: 15px;
+}
+
+.container .b1 b {
+  color: rgb(168, 50, 219);
+}
+
+.container .b1:hover {
+  background-color: grey;
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.error {
+  margin-top: 20%;
+  color: red;
+  font-size: 500%;
+}
+
+h3 {
+  color: red;
+}
+
+.order {
+  margin-top: 20%;
+}
+
+.collapse li img {
+  margin-top: -3%;
+}
+
+.donmenu {
+  margin-top: 2%;
+  /* font-family: "Montserrat", sans-serif;*/
+  font-family: "Dosis", sans-serif;
+  border-radius: 40px 40px;
+  border-width: 2px;
+  border-style: solid;
+  width: calc(50% + 130px);
+  color: rgb(0, 0, 0) !important;
+  border-color: rgb(165, 165, 165) !important;
+  transition: 0.3s;
+  background-color: rgb(165, 165, 165, 0) !important;
+}
+
+.donmenu button {
+  color: rgb(0, 0, 0);
+  border-color: rgb(174, 174, 174);
+  transition: 0.3s;
+  background-color: rgb(255, 255, 255);
+}
+
+.donmenu button:hover {
+  transition: 0.3s;
+  background-color: rgb(195, 195, 195);
+}
+
+.trademc-buyform-title {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
